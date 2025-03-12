@@ -4,8 +4,8 @@ import AuthInput from "../../components/AuthInput";
 const Register = () => {
   return (
     <div className="flex flex-col items-center justify-center w-11/12 mx-auto h-fit px-5 py-16 rounded-xl shadow-[0px_3px_10.8px_2px_rgba(0,_0,_0,_0.07)]">
-      <h1 className="flex flex-wrap items-center justify-center title-extra-18 text-gray-01">
-        <span>지금 가입하여</span>
+      <h1 className="flex flex-wrap items-center justify-center whitespace-pre title-extra-18 text-gray-01">
+        <span>지금 가입하여 </span>
         <span>투명하게 공유해 보세요</span>
       </h1>
 
