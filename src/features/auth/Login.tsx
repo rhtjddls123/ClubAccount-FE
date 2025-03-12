@@ -13,7 +13,7 @@ const Login = () => {
       </div>
 
       <div className="flex flex-col items-center w-full gap-4 mt-12">
-        <AuthButton />
+        <AuthButton>로그인</AuthButton>
 
         <div className="flex gap-8">
           <AuthLink>아이디 찾기</AuthLink>
