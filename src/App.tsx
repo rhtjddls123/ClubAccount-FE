@@ -1,10 +1,10 @@
-import Login from "./features/auth/Login";
+import Register from "./features/auth/Register";
 
 function App() {
   return (
     <>
       <main className="flex items-center w-lvw h-lvh">
-        <Login />
+        <Register />
       </main>
     </>
   );
