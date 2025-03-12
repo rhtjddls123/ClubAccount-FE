@@ -1,7 +1,11 @@
+import Login from "./features/auth/Login";
+
 function App() {
   return (
     <>
-      <h1 className="text-primary body-med-16">hi</h1>
+      <main className="flex items-center w-lvw h-lvh">
+        <Login />
+      </main>
     </>
   );
 }
