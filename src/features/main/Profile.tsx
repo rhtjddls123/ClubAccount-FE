@@ -1,4 +1,4 @@
-import ChevronRightIcon from "../../icons/ChevronRightIcon";
+import ArrowRightIcon from "../../icons/ArrowRightIcon";
 
 const Profile = () => {
   return (
@@ -11,9 +11,7 @@ const Profile = () => {
         />
         <div className="flex items-center flex-1 gap-1">
           <p className="text-gray-01 body-bold-16">김파산 님</p>
-          <div className="flex items-center justify-center w-4 h-4">
-            <ChevronRightIcon />
-          </div>
+          <ArrowRightIcon />
         </div>
         <p className="caption-med-12 text-gray-03">로그아웃</p>
       </div>

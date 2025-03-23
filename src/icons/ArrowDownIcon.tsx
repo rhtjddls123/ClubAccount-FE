@@ -1,18 +1,19 @@
-interface ChevronRightIconProps {
+interface ArrowDownIconProps {
   className?: string;
 }
-const ChevronRightIcon = ({ className }: ChevronRightIconProps) => {
+
+const ArrowDownIcon = ({ className }: ArrowDownIconProps) => {
   return (
     <svg
       className={className}
-      width="6"
-      height="12"
-      viewBox="0 0 6 12"
+      width="18"
+      height="18"
+      viewBox="0 0 18 18"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
       <path
-        d="M0.75 0.75L5.25 6L0.75 11.25"
+        d="M14.25 6.75L9 11.25L3.75 6.75"
         stroke="#323232"
         stroke-width="1.25"
         stroke-linecap="round"
@@ -22,4 +23,4 @@ const ChevronRightIcon = ({ className }: ChevronRightIconProps) => {
   );
 };
 
-export default ChevronRightIcon;
+export default ArrowDownIcon;
