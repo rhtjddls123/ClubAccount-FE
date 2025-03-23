@@ -1,13 +1,14 @@
-import { ButtonHTMLAttributes, ReactNode } from "react";
+import { ReactNode } from "react";
+import { Link, LinkProps } from "react-router-dom";
 
-interface AuthLinkProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+interface AuthLinkProps extends LinkProps {
   children: ReactNode;
 }
 const AuthLink = ({ children, ...props }: AuthLinkProps) => {
   return (
-    <button className="caption-med-12 text-grey-03" {...props}>
+    <Link className="caption-med-12 text-grey-03" {...props}>
       <span>{children}</span>
-    </button>
+    </Link>
   );
 };
 
