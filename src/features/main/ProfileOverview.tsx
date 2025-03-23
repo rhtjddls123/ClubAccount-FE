@@ -3,7 +3,7 @@ import Profile from "./Profile";
 
 const ProfileOverview = () => {
   return (
-    <div className="m-6">
+    <div className="p-6">
       <Profile />
       <Overview />
     </div>
