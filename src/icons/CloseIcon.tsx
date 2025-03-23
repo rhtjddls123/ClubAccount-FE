@@ -12,7 +12,12 @@ const CloseIcon = ({ className }: CloseIconProps) => {
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M19 5L5 19M5 5L19 19" stroke="black" stroke-width="1.5" stroke-linecap="round" />
+      <path
+        d="M19 5L5 19M5 5L19 19"
+        stroke="currentColor"
+        stroke-width="1.5"
+        stroke-linecap="round"
+      />
     </svg>
   );
 };
