@@ -1,13 +1,12 @@
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import AuthLayout from "./pages/AuthLayout";
+import RootLayout from "./pages/RootLayout";
 import AuthPage from "./pages/AuthPage";
 
 const router = createBrowserRouter([
   {
-    path: "/auth",
-    id: "root",
-    element: <AuthLayout />,
-    children: [{ index: true, element: <AuthPage /> }]
+    path: "/",
+    element: <RootLayout />,
+    children: [{ path: "auth", element: <AuthPage /> }]
   }
 ]);
 
