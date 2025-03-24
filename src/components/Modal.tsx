@@ -31,7 +31,7 @@ const Modal = ({ open, onClose, children }: ModalProps) => {
   return createPortal(
     <dialog
       onClick={handleBackdropClick}
-      className="m-auto overflow-scroll bg-black/0 backdrop:bg-black/40 -z-10"
+      className="m-auto bg-black/0 backdrop:bg-black/40 -z-10"
       ref={dialogRef}
       onClose={onClose}
     >
