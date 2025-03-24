@@ -15,8 +15,8 @@ const CloseIcon = ({ className }: CloseIconProps) => {
       <path
         d="M19 5L5 19M5 5L19 19"
         stroke="currentColor"
-        stroke-width="1.5"
-        stroke-linecap="round"
+        strokeWidth="1.5"
+        strokeLinecap="round"
       />
     </svg>
   );

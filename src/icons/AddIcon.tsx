@@ -15,8 +15,8 @@ const AddIcon = ({ className }: AddIconProps) => {
       <path
         d="M15 9H9M9 9H3M9 9V3M9 9V15"
         stroke="currentColor"
-        stroke-width="1.25"
-        stroke-linecap="round"
+        strokeWidth="1.25"
+        strokeLinecap="round"
       />
     </svg>
   );
