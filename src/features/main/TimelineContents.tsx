@@ -6,7 +6,6 @@ interface TimelineContentsProps {
 }
 
 const TimelineContents = ({ receipts }: TimelineContentsProps) => {
-  console.log(receipts);
   return (
     <ul className="flex flex-col items-center justify-center flex-1 gap-4 p-6">
       {receipts.length === 0 && <p>지출 내역을 추가해주세요!</p>}

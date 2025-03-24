@@ -8,7 +8,7 @@ const menuList = [
 
 const MainNavigation = () => {
   return (
-    <header className="w-full h-16 border-b-2 border-gray-05">
+    <header className="flex-shrink-0 w-full h-16 border-b-2 border-gray-05">
       <nav className="flex justify-between w-full h-full">
         <div className="flex items-center justify-center px-6">
           <h1 className="text-2xl font-extrabold text-primary">띵부</h1>
