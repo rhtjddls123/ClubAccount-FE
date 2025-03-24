@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import ArrowRightIcon from "../../icons/ArrowRightIcon";
 
 const Profile = () => {
@@ -13,7 +14,9 @@ const Profile = () => {
           <p className="text-gray-01 body-bold-16">김파산 님</p>
           <ArrowRightIcon />
         </div>
-        <p className="caption-med-12 text-gray-03">로그아웃</p>
+        <Link to={"/auth"} className="caption-med-12 text-gray-03">
+          로그아웃
+        </Link>
       </div>
     </>
   );

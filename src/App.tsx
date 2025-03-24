@@ -7,6 +7,7 @@ import MainLayout from "./pages/MainLayout";
 import { receiptLoader } from "./utils/loaderFn";
 
 const router = createBrowserRouter([
+  { path: "/", element: <MainLayout /> },
   {
     path: "/auth",
     element: <AuthLayout />,
