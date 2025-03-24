@@ -14,3 +14,5 @@ export interface ReceiptType {
   etc?: string;
   receipt_image_url?: string;
 }
+
+export type AddModalType = "receipt" | "self";
