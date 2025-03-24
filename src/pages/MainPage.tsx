@@ -14,7 +14,12 @@ const MainPage = () => {
       <ProfileOverview />
       <TimelineHeader />
       <Suspense fallback={<SpinnerIcon />}>
-        <Await resolve={data}>{(receipts) => <TimelineContents receipts={receipts} />}</Await>
+        <Await
+          errorElement={<p className="m-auto">데이터를 불러오는데 실패하였습니다.</p>}
+          resolve={data}
+        >
+          {(receipts) => <TimelineContents receipts={receipts} />}
+        </Await>
       </Suspense>
     </div>
   );
