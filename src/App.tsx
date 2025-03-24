@@ -4,6 +4,7 @@ import AuthPage from "./pages/AuthPage";
 import { PARAMS_IDS } from "./constants/constants";
 import MainPage from "./pages/MainPage";
 import MainLayout from "./pages/MainLayout";
+import { receiptLoader } from "./utils/loaderFn";
 
 const router = createBrowserRouter([
   {
@@ -14,7 +15,7 @@ const router = createBrowserRouter([
   {
     path: `/:${PARAMS_IDS.CLUB_CODE}`,
     element: <MainLayout />,
-    children: [{ index: true, element: <MainPage /> }]
+    children: [{ index: true, element: <MainPage />, loader: receiptLoader }]
   }
 ]);
 

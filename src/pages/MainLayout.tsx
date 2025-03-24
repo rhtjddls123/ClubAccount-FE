@@ -3,7 +3,7 @@ import MainNavigation from "../features/main/MainNavigation";
 
 const MainLayout = () => {
   return (
-    <div className="flex flex-col w-lvw h-lvh">
+    <div className="flex flex-col w-vw h-dvh">
       <MainNavigation />
       <main className="w-full h-full">
         <Outlet />
