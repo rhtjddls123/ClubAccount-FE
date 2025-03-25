@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { FormEvent } from "react";
 import Input from "../../components/Input";
 import Modal from "../../components/Modal";
 import Selector from "../../components/Selector";
 import { AddModalType } from "../../types/types";
 import CameraIcon from "../../icons/CameraIcon";
 import FolderIcon from "../../icons/FolderIcon";
+import SingleDateInput from "../../components/SingleDateInput";
 
 type categoryType = "회식비" | "용품 구매비" | "정기 구독비" | "대관비" | "기타";
 
@@ -17,21 +18,19 @@ interface AddModalProps {
 }
 
 const AddModal = ({ type, open, onCloseModal }: AddModalProps) => {
-  const [selectCategory, setSelectCategory] = useState<categoryType>();
-
-  const handleSelectCategory = (category: categoryType) => {
-    setSelectCategory(category);
+  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    const fd = new FormData(e.currentTarget);
+    const data = Object.fromEntries(fd.entries());
+    console.log(data);
   };
 
   return (
-    <Modal
-      open={open}
-      onClose={() => {
-        setSelectCategory(undefined);
-        onCloseModal();
-      }}
-    >
-      <form className="w-[87vw] h-[80dvh] rounded-2xl bg-white flex flex-col justify-center items-center py-8 px-5 gap-6">
+    <Modal open={open} onClose={onCloseModal}>
+      <form
+        onSubmit={handleSubmit}
+        className="w-[87vw] h-[80dvh] rounded-2xl bg-white flex flex-col justify-center items-center py-8 px-5 gap-6"
+      >
         <h1 className="title-extra-18 text-gray-01">
           {type === "self" ? "직접 등록하기" : "스캔으로 등록하기"}
         </h1>
@@ -55,16 +54,11 @@ const AddModal = ({ type, open, onCloseModal }: AddModalProps) => {
                 </button>
               </div>
             )}
-            <Selector
-              title={selectCategory ?? "카테고리"}
-              list={category}
-              onSelect={handleSelectCategory}
-            />
-            <input className="hidden" id="category" value={selectCategory} />
-            <Input type="date" onFocus={(e) => e.target.showPicker()} />
-            <Input placeholder="상호명" />
-            <Input placeholder="금액" />
-            <Input placeholder="메모" />
+            <Selector selectTitle={"카테고리"} selectList={category} name="category" />
+            <SingleDateInput name="date" />
+            <Input placeholder="상호명" name="store_name" />
+            <Input placeholder="금액" name="amount" />
+            <Input placeholder="메모" name="etc" />
           </div>
           <footer className="flex flex-col w-full gap-3">
             <button className="px-4 py-3 text-center rounded-lg bg-primary body-bold-16 text-gray-01">
