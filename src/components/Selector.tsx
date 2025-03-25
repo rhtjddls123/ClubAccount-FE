@@ -49,7 +49,7 @@ const Selector = <T,>({ selectTitle, selectList, ...props }: SelectorProps<T>) =
           </ul>
         )}
       </div>
-      <input className="hidden" value={String(data)} readOnly {...props} />
+      <input className="hidden" value={data ? String(data) : ""} readOnly {...props} />
     </>
   );
 };
