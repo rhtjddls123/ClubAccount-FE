@@ -11,7 +11,7 @@ const Selector = <T,>({ selectTitle, selectList, ...props }: SelectorProps<T>) =
   const [data, setData] = useState<T>();
 
   let classes =
-    "flex items-center justify-between w-full h-10 gap-1 px-4 border cursor-pointer rounded-t-xl border-gray-05 ";
+    "flex items-center justify-between w-full h-10 gap-1 px-4 border cursor-pointer rounded-t-xl border-gray-05 focus:outline-0 ";
 
   if (!open) {
     classes += "rounded-b-xl";

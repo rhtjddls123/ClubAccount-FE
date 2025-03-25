@@ -11,8 +11,9 @@ const SingleDateInput = ({ ...props }: InputHTMLAttributes<HTMLInputElement>) =>
   return (
     <>
       <Datepicker
-        inputClassName="w-full h-10 gap-1 px-4 border body-med-14 text-gray-01 rounded-xl border-gray-05"
+        inputClassName="w-full h-10 gap-1 px-4 border body-med-14 text-gray-01 rounded-xl border-gray-05 focus:outline-0"
         popoverDirection="down"
+        readOnly
         i18n={"ko"}
         placeholder="날짜"
         useRange={false}
